@@ -4,27 +4,16 @@ import { LoginComponent } from './Autentification/components/login/login.compone
 
 const routes: Routes = [
   {
-    path: '',
-    component: LoginComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
-      },
-      {
-        path: 'auth',
-        loadChildren: () => import('./Autentification/autentification.module').then(m => m.AutentificationModule)
-      },
-      {
-        path: 'main',
-        loadChildren: () => import('./Home/home.module').then(m => m.HomeModule)
-      },
-    ]    
+    path: 'auth',
+    loadChildren: () => import('./Autentification/autentification.module').then(m => m.AutentificationModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./Home/home.module').then(m => m.HomeModule)
   },
   {
     path: '**',
-    loadChildren: () => import('./Autentification/autentification.module').then(m => m.AutentificationModule)
+    redirectTo: 'auth'
   },
 
 ];

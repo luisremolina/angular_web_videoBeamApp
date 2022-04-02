@@ -5,8 +5,15 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { AgendarComponent } from './components/agendar/agendar.component';
 
 const routes: Routes = [
-  { path: 'inicio', component: InicioComponent },
-  { path: 'agendar', component: AgendarComponent },
+  { 
+    path: '',
+    component: MainComponent,
+    children: [
+      { path: 'inicio', component: InicioComponent },
+      { path: 'agendar', component: AgendarComponent },
+      { path: '**', redirectTo: 'inicio' },
+    ]
+  }
 ];
 
 @NgModule({

@@ -62,11 +62,13 @@ nav ul li{
     line-height: 70px;
     border-radius: 14px;
 }
-nav li.active a{
+
+nav ul li.active a{
     color: #003366;
     background-color: #fddb0d;
     border-radius: 14px;
 }
+
 nav li a{
     padding: 15px 25px;
     border: 0;
