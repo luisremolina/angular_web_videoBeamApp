@@ -1,22 +1,19 @@
-<body>
-    <div class="main-bar">
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <div class="logo-header">
-                <a href="#">RaviWeb</a>
-            </div>
-            <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Gallery</a></li>
-                <li><a href="#">Enquiry</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</body>
+<div class="loginbox">
+  <img src="./assets/img/profile.svg" class="avatar">
+  <h1>Registrate</h1>
+  <form>
+      <input type="text" class="input-field" placeholder="Nombre" required>
+      <input type="email" class="input-field" placeholder="Correo" required>
+  <input type="password" class="input-field" placeholder="Contraseña" required>
+      <label class="content-input">
+          <input type="radio" id="op" name="fav" value="OP">
+          <label for="op">Profesor</label><br>
+          <input type="radio" id="aux" name="fav" value="AUX">
+          <label for="aux">Auxiliar</label><br>
+          <i></i>
+      </label>
+
+      <button type="submit" class="submit-btn">Registrate</button><br>
+      <a href="#">¿Ya tienes cuenta?</a>
+  </form>
+</div>
